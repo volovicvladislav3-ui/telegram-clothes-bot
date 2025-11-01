@@ -7,12 +7,12 @@ import sqlite3, json, re, datetime, time
 TOKEN = "7557908459:AAHJt4DqnN-TijbjMm9BbGExwCxJ49vm18I" 
 ADMIN_ID = 7867809053                # ваш Telegram ID
 MANAGER_IDS = [7867809053]          # список Telegram ID менеджеров
-CHANNEL_ID = None                  # например: -1001234567890, если хотите постить ссылки в канал. Иначе None
+CHANNEL_ID = "None"                 # например: -1001234567890, если хотите постить ссылки в канал. Иначе None
 CURRENCY = "₽"
 REFERRAL_CAP = 40                  # потолок реферальной скидки, %
 
 bot = telebot.TeleBot(TOKEN, parse_mode="HTML")
-BOT_USERNAME = None  # узнаем при старте
+BOT_USERNAME = "None"  # узнаем при старте
 
 # ====== БАЗА ДАННЫХ ======
 conn = sqlite3.connect("shop.db", check_same_thread=False)
